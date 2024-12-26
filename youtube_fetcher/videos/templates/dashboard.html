@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Dashboard</title>
+</head>
+<body>
+    <h1>Video Dashboard</h1>
+    <form method="get">
+        <input type="text" name="search" placeholder="Search..." value="{{ search_query }}" />
+        <select name="sort_by">
+            <option value="published_at" {% if sort_by == 'published_at' %}selected{% endif %}>Published Date</option>
+            <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Title</option>
+        </select>
+        <select name="order">
+            <option value="desc" {% if order == 'desc' %}selected{% endif %}>Descending</option>
+            <option value="asc" {% if order == 'asc' %}selected{% endif %}>Ascending</option>
+        </select>
+        <button type="submit">Apply</button>
+    </form>
+    <ul>
+        {% for video in videos %}
+        <li>
+            <h2>{{ video.title }}</h2>
+            <p>{{ video.description }}</p>
+            <p>Published: {{ video.published_at }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
