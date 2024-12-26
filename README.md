@@ -54,6 +54,7 @@ Windows
 `Download and install Redis from https://github.com/microsoftarchive/redis/releases.`
 or can use docker to start the redis server 
 `docker run --name redis-server -d -p 6379:6379 redis`
+
 Start Redis server:
 ```
 redis-server
