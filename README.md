@@ -33,6 +33,8 @@ source venv/bin/activate
 Install Dependencies
 ```pip install -r requirements.txt```
 
+Add you youtube_api_key in `videos/tasks.py`.
+
 ### Configure the Database
 Create a PostgreSQL database and user.
 Update the DATABASES setting in `settings.py` with your `database credentials`.
